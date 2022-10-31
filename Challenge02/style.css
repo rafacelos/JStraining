@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #c0a3f1;
+
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+
+ color: black;
+}
+
+header, footer, main {
+  background: #e3e1e9;
+  width: 80%;
+  padding: 20px;
+  border: 2px solid #514d5e;
+  border-radius: 13px;
+  text-align: center;
+}
+
+main {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+ul {
+  margin: 20px 15px 30px;
+}
+
+li {
+  margin-bottom: 5px;
+  font-size: 20px;
+}

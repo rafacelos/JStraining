@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <title>IMC de Pacientes</title>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>
+        Controle de Pacientes
+      </h1>
+    </header>
+
+    <main>
+      <section>
+        <form action="">
+          <div class="form-section">
+            <div class="input-wrapper">
+              <label for="p-Name"><p>Digite o primeiro e último nome</p></label>
+              <input id="p-Name" type="text" maxlength="24">
+            </div>
+            <div class="input-wrapper">
+              <label for="p-Age"><p>Digite a idade</p></label>
+              <input id="p-Age" type="number">
+            </div>
+          </div>
+          <div class="form-section">
+            <div class="input-wrapper">
+              <label for="p-Weight"><p>Digite o peso em kg</p></label>
+              <input id="p-Weight" type="number">
+            </div>
+            <div class="input-wrapper">
+              <label for="p-Height"><p>Digite a altura em metros</p></label>
+              <input id="p-Height" type="number">
+            </div>
+          </div>
+          <button>Guardar Paciente</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Lista dos Pacientes</h2>
+
+        <form id="singleInput" action="#">
+          <div class="input-wrapper">
+            <label for="searchPatient"><p>Procurar paciente:</p></label>
+            <div class="inputAndButton">
+              <input id="searchPatient" type="text">
+              <button form="singleInput" id="buttonSVG">
+                <svg
+                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#f8f2f2" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="116" cy="116" r="84" fill="none" stroke="#f8f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></circle><line x1="175.4" y1="175.4" x2="224" y2="224" fill="none" stroke="#f8f2f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </form>
+        <ul>
+          <li></li>
+        </ul>
+      </section>
+    </main>
+    
+    <footer>
+      <p>Desenvolvido com amor por Rafael Vasconcelos</p>
+    </footer>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>
