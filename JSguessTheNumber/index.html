@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +13,26 @@
   <title>GuessTheNumber</title>
 </head>
 <body>
-  <h1>Bem vindo ao jogo da adivinhaçao!</h1>
-  <p>Para reiniciar o jogo, actualize a página com f5</p>
-  <script src="./scripts.js"></script>
+  <main>
+
+    <div class="screen1 hide">
+      <div>
+        <h1>Jogo da adivinhação!</h1>
+        <p>Adivinhe o número entre 0 e 10:</p>
+      </div>
+      <div>
+        <form action="">
+          <input type="number">
+          <button>Tentar</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="screen2">
+      <h2>Acertou em 3 tentativas!</h2>
+      <button>Jogar Novamente</button>
+    </div>
+  </main>
+  <!-- <script src="./scripts.js"></script> -->
 </body>
 </html>

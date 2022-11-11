@@ -1,3 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+root {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: aquamarine;
+  background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
+
+  color: #34355B;
+  line-height: 150%;
+  
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  width: min(42.8rem, 90%);
+  background: #FFFFFF;
+  box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+  border-radius: .6rem;
+  padding: 48px 64px 64px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4.8rem;
+
+  margin-top: -12rem;
+}
+
+body, button, input {
+  font-size: 1.6rem;
+  font-family: 'DM Sans', sans-serif;
+}
+
+
+input, button {
+  border: none;
+  padding: 1.6rem;
+  line-height: 2.1rem;
+}
+
+button {
+  background: #7879F1;
+  border-radius: 0 .4rem .4rem 0;
+  align-items: center;
+
+  color: #FFFFFF;
+  font-weight: 700;
+  line-height: 21px;
+  cursor: pointer;
+
+  transition: background .3s;
+}
+
+button:hover {
+  background: #6363ce;
+}
+
+input {
+  background: #DCE2E9;
+  border-radius: .4rem 0 0 .4rem;
+  width: 6rem;
+
+  color: #34355B;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+
+
+/* Screen1 */
+
+h1 {
+  margin-bottom: 1.6rem;
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+p {
+  opacity: .8;
+}
+
+div {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  justfify-content: center;
+}
+
+
+/* screen2 */
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: normal;
+
+  margin-bottom: 3.3rem;
+}
+
+.screen2 button {
+  border-radius: 0.4rem;
 }
