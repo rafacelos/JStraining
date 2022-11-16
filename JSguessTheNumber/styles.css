@@ -10,7 +10,7 @@ root {
 
 body {
   background: linear-gradient(287.56deg, #C2E9FB 0%, #A1C4FD 100%);
-
+    
   color: #34355B;
   line-height: 150%;
   
@@ -81,7 +81,11 @@ input[type=number]::-webkit-outer-spin-button {
   display: none;
 }
 
-
+.head {
+  margin-top: 1rem;
+  display: flex;
+  gap: 2rem;
+}
 
 /* Screen1 */
 
@@ -103,8 +107,9 @@ div {
 }
 
 form {
+  margin-top: 4.8rem;
   display: flex;
-  justfify-content: center;
+  justify-content: center;
 }
 
 
@@ -113,10 +118,10 @@ form {
 h2 {
   font-size: 2.4rem;
   font-weight: normal;
-
-  margin-bottom: 3.3rem;
+  margin: auto;
 }
 
 .screen2 button {
+  margin-top: 3.3rem;
   border-radius: 0.4rem;
 }

@@ -1,32 +1,32 @@
-/*
-** Jogo da advinhação **
-
-  Apresente a mensagem ao usuário:
-  "Advinhe o número que estou pensando? Está entre 0 e 10"
-
-  Crie um lógica para gerar um número aleatório 
-  e verificar se o número digitado é o mesmo que o aleatório gerado pelo sistema.
-
-  Enquanto o usuário não adivinhar o número, mostrar a mensagem:
-  "Erro, tente novamente:"
-
-  Caso o usuário acerte o número, apresentar a mensagem:
-  "Parabéns! Você advinhou o número em x tentativas"
-
-  Substitua o "x" da mensagem, pelo número de tentativas
-*/
-
-let userGuess = prompt("Advinhe o número que estou pensando? Está entre 0 e 10")
-
 let randomNumber = Math.ceil(Math.random() * 10)
-let match = Number(userGuess) == randomNumber
-let xAttempts = 1;
+let xAttempts = 1
+const screen1 = document.querySelector(".screen1")
+const screen2 = document.querySelector(".screen2")
 
-console.log(userGuess, randomNumber, match)
+const btnGuess = document.querySelector("#btnGuess")
+const btnReset = document.querySelector("#btnReset")
 
-while(Number(userGuess) != randomNumber) {
-  userGuess = prompt("Que pena, voce errou. Quer tentar novamente?")
+btnGuess.addEventListener("click", handleGuessClick)
+btnReset.addEventListener("click", () => {  
+  randomNumber = Math.ceil(Math.random() * 10)
+  xAttempts = 1
+  
+  screen1.classList.toggle("hide")
+  screen2.classList.toggle("hide")
+});
+
+function handleGuessClick(event) {
+  event.preventDefault()
+
+  const inputNumber = document.querySelector("#userGuess")
+
+  if (Number(inputNumber.value) == randomNumber) {
+    document.querySelector(".screen1").classList.add("hide")
+    document.querySelector(".screen2").classList.remove("hide")
+
+    document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas!`
+  }
+  
+  inputNumber.value = " "
   xAttempts++
-}
-
-alert(`Parabéns, o número era ${randomNumber} voce adivinhou o número em ${xAttempts} tentativas.`)
+};

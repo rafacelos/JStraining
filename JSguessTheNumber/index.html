@@ -15,24 +15,30 @@
 <body>
   <main>
 
-    <div class="screen1 hide">
-      <div>
-        <h1>Jogo da adivinhação!</h1>
-        <p>Adivinhe o número entre 0 e 10:</p>
+    <div class="screen1">
+      <div class="head">
+        <div class="headWrapper">
+          <img src="./assets/CuteFoxSVG.svg" alt="Fox playing on the phone">
+        </div>
+        <div class="headWrapper">
+          <h1>Jogo da adivinhação!</h1>
+          <p>Adivinhe o número entre 0 e 10:</p>
+        </div>
       </div>
-      <div>
-        <form action="">
-          <input type="number">
-          <button>Tentar</button>
-        </form>
-      </div>
+      <form action="">
+        <input id="userGuess" type="number">
+        <button id="btnGuess">Tentar</button>
+      </form>
     </div>
 
-    <div class="screen2">
-      <h2>Acertou em 3 tentativas!</h2>
-      <button>Jogar Novamente</button>
+    <div class="screen2 hide">
+      <div class="head">
+        <img src="./assets/CuteFoxYesSVG.svg" alt="Fox praise the user">
+        <h2>Acertou em 3 tentativas!</h2>
+      </div>
+      <button id="btnReset">Jogar Novamente</button>
     </div>
   </main>
-  <!-- <script src="./scripts.js"></script> -->
+  <script src="./scripts.js"></script>
 </body>
 </html>
