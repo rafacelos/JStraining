@@ -1,32 +1,45 @@
-let randomNumber = Math.ceil(Math.random() * 10)
-let xAttempts = 1
-const screen1 = document.querySelector(".screen1")
-const screen2 = document.querySelector(".screen2")
+const screen1 = document.querySelector(".screen1");
+const screen2 = document.querySelector(".screen2");
+const btnGuess = document.querySelector("#btnGuess");
+const btnReset = document.querySelector("#btnReset");
+let randomNumber = Math.ceil(Math.random() * 10);
+let xAttempts = 1;
 
-const btnGuess = document.querySelector("#btnGuess")
-const btnReset = document.querySelector("#btnReset")
+btnGuess.addEventListener("click", handleGuessClick);
+btnReset.addEventListener("click", handleResetClick);
+document.addEventListener("keydown", (e) => {
+  if(e.key== 'Enter' && screen1.classList.contains('hide')) {
+    handleResetClick()
+  }
+});
 
-btnGuess.addEventListener("click", handleGuessClick)
-btnReset.addEventListener("click", () => {  
-  randomNumber = Math.ceil(Math.random() * 10)
-  xAttempts = 1
-  
+function toggleScreen() {
   screen1.classList.toggle("hide")
   screen2.classList.toggle("hide")
-});
+};
 
 function handleGuessClick(event) {
   event.preventDefault()
 
   const inputNumber = document.querySelector("#userGuess")
+  let guess = Number(inputNumber.value)
 
-  if (Number(inputNumber.value) == randomNumber) {
-    document.querySelector(".screen1").classList.add("hide")
-    document.querySelector(".screen2").classList.remove("hide")
-
-    document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas!`
+  if (guess < 0 || guess > 10) {
+    alert("número inválido, por favor digite um número entre 0 e 10")
+    return
   }
   
-  inputNumber.value = " "
+  if (Number(inputNumber.value) == randomNumber) {
+    document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas!`
+    toggleScreen()
+  }
   xAttempts++
+  inputNumber.value = " "
+};
+
+function handleResetClick() {
+  randomNumber = Math.ceil(Math.random() * 10)
+  xAttempts = 1
+  
+  toggleScreen()
 };
