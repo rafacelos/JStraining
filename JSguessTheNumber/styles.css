@@ -39,7 +39,6 @@ body, button, input {
   font-family: 'DM Sans', sans-serif;
 }
 
-
 input, button {
   border: none;
   padding: 1.6rem;
@@ -124,4 +123,32 @@ h2 {
 .screen2 button {
   margin-top: 3.3rem;
   border-radius: 0.4rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    margin-top: -28rem;
+  }
+
+  body, button, input {
+    font-size: 1.4rem;
+  }
+  input, button {
+    line-height: 1.6rem;
+  }
+
+  form {
+    margin-top: 3.4rem;
+  }
+
+  h1 {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
 }
