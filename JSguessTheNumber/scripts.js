@@ -31,8 +31,14 @@ function handleGuessClick(event) {
   
   if (Number(inputNumber.value) == randomNumber) {
     document.querySelector(".screen2 h2").innerText = `Acertou em ${xAttempts} tentativas!`
+    document.querySelector(".screen1 p").innerText = `Adivinhe o número entre 0 e 10:`
     toggleScreen()
   }
+  
+  else {
+    document.querySelector(".screen1 p").innerText = `Palpite errado, tente novamente. Adivinhe o número entre 0 e 10:`
+  }
+
   xAttempts++
   inputNumber.value = " "
 };
